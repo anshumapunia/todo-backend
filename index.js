@@ -16,6 +16,10 @@ app.use(express.json());
 
 app.use(cors())
 
+app.get("*",(req,res)=>{
+res.status(200).send({"msg":"backend working "})
+})
+
 
 
 app.use("/user",userRouter);
